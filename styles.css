@@ -1,0 +1,95 @@
+:root {
+  --brand-start: #0d6efd; /* Bootstrap primary */
+  --brand-end: #6610f2;   /* Bootstrap purple */
+  --fancy: #20c997;       /* teal */
+}
+
+/* Texto com gradiente */
+.text-gradient {
+  background: linear-gradient(90deg, var(--brand-start), var(--brand-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Seção hero demonstra Flexbox (estrutura no HTML) */
+.hero {
+  min-height: 50vh;
+  background: linear-gradient(180deg, rgba(13, 110, 253, 0.08), rgba(102, 16, 242, 0.08));
+}
+
+/* Box model demo */
+.box-demo {
+  margin: 12px;            /* margem externa */
+  border: 3px dashed var(--brand-start);
+  padding: 20px;           /* espaçamento interno */
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Listas personalizadas */
+.custom-ul {
+  list-style: square inside;
+}
+.custom-ol {
+  counter-reset: item;
+  padding-left: 0;
+}
+.custom-ol li {
+  counter-increment: item;
+  margin: 6px 0;
+}
+.custom-ol li::marker {
+  content: counters(item, '.') '. ';
+  color: var(--brand-start);
+  font-weight: 700;
+}
+
+/* Pseudo-classes para links e botões */
+.link-fancy {
+  color: var(--fancy);
+  text-decoration: none;
+  position: relative;
+}
+.link-fancy::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--fancy);
+  transition: width 200ms ease-in-out;
+}
+.link-fancy:hover::after,
+.link-fancy:focus::after {
+  width: 100%;
+}
+.link-fancy:active {
+  opacity: 0.8;
+}
+
+/* Efeito hover para cards */
+.hover-lift {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Demonstração de CSS Grid */
+.grid-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+.grid-item {
+  padding: 16px;
+  border-radius: 10px;
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
