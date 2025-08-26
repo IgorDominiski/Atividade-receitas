@@ -5,7 +5,7 @@
 }
 
 /* Texto com gradiente */
-.text-gradient {
+.texto-degrade {
   background: linear-gradient(90deg, var(--brand-start), var(--brand-end));
   -webkit-background-clip: text;
   background-clip: text;
@@ -13,13 +13,13 @@
 }
 
 /* Seção hero demonstra Flexbox (estrutura no HTML) */
-.hero {
+.destaque {
   min-height: 50vh;
   background: linear-gradient(180deg, rgba(13, 110, 253, 0.08), rgba(102, 16, 242, 0.08));
 }
 
 /* Box model demo */
-.box-demo {
+.caixa-demonstracao {
   margin: 12px;            /* margem externa */
   border: 3px dashed var(--brand-start);
   padding: 20px;           /* espaçamento interno */
@@ -29,30 +29,30 @@
 }
 
 /* Listas personalizadas */
-.custom-ul {
+.lista-personalizada {
   list-style: square inside;
 }
-.custom-ol {
+.lista-ordenada-personalizada {
   counter-reset: item;
   padding-left: 0;
 }
-.custom-ol li {
+.lista-ordenada-personalizada li {
   counter-increment: item;
   margin: 6px 0;
 }
-.custom-ol li::marker {
+.lista-ordenada-personalizada li::marker {
   content: counters(item, '.') '. ';
   color: var(--brand-start);
   font-weight: 700;
 }
 
 /* Pseudo-classes para links e botões */
-.link-fancy {
+.link-destaque {
   color: var(--fancy);
   text-decoration: none;
   position: relative;
 }
-.link-fancy::after {
+.link-destaque::after {
   content: '';
   position: absolute;
   left: 0;
@@ -62,30 +62,30 @@
   background: var(--fancy);
   transition: width 200ms ease-in-out;
 }
-.link-fancy:hover::after,
-.link-fancy:focus::after {
+.link-destaque:hover::after,
+.link-destaque:focus::after {
   width: 100%;
 }
-.link-fancy:active {
+.link-destaque:active {
   opacity: 0.8;
 }
 
 /* Efeito hover para cards */
-.hover-lift {
+.flutuar-ao-passar {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
-.hover-lift:hover {
+.flutuar-ao-passar:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Demonstração de CSS Grid */
-.grid-demo {
+.grade-exemplo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
 }
-.grid-item {
+.item-grade {
   padding: 16px;
   border-radius: 10px;
   background: #fafafa;
