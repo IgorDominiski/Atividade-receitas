@@ -92,4 +92,11 @@
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+/* Receitas: ajustes visuais */
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+
 
